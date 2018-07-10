@@ -1,5 +1,7 @@
 # 逍遥模拟器Reroot
 
+# Github's Markdown doesn't support base64 image encode so you may want read readme.html to show picture in this doc normally.  
+
 近期调试app发现逍遥模拟器还不错，虽然一样有广告但是系统要新一些而且能够直接软重启自带root，看起来有genymotion的影子在，相比其他的模拟器也要流畅一些，但是缺点是自带的root不好管理且有部分软件不支持，遂想到更换自带root为su。尝试了直接安卓supersu和在模拟器里面用终端模拟器和外面用adb直接替换system/xbin/su的方法，没有替换成功，于是只好想其他办法，比如宿主机直接加载虚拟磁盘替换掉文件系统里面的su然后保存写回，果然成功了，该方法也适合其他部分无root权限模拟器的root。  
 
 1.找到逍遥模拟器安装目录下的模板虚机磁盘文件，在我的环境下是"D:\Program Files\Microvirt\MEmu\image\51"，备份该目录下所有文件避免改错了无法使用。  
